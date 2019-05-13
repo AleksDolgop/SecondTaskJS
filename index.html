@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание 2</title>
+    <style>
+        .wrapper{
+            padding: 2%;
+        }
+
+        #horse_walk{
+            width: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid gray;
+            padding: 0.5%;
+            min-width: 15em;
+        }
+
+        #horse_walk p{
+            margin-bottom: 0.1em;
+            margin-top: 0.2em;
+        }
+
+        #horse_walk input{
+            margin-bottom: 0.5em;
+            width: 90%
+        }
+    </style>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="horse_walk">
+            <p><b>Исходное положение:</b></p>
+            <input type="text" name="position" v-bind:value="position" v-on:input="position = $event.target.value">
+            <button v-on:click="result">Ок</button>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+</body>
+</html>
